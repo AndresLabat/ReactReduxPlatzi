@@ -1,0 +1,7 @@
+.PokemonCard{
+    background-color: lightgray;
+}
+
+.ant-card .ant-card-head{
+    border-bottom: 1px solid lightgray;
+}
