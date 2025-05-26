@@ -1,12 +1,8 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     pokemons: []
 }
-
-export const fetchPokemonsWithDetails = createAsyncThunk(
-
-)
 
 export const dataSlice = createSlice({
     name: 'data',
