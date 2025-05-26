@@ -1,10 +1,10 @@
-/* Primer tipo */
+/* First type */
 .fire     { --first-color: orange; }
 .grass    { --first-color: lightgreen; }
 .water    { --first-color: blue; }
 .bug      { --first-color: green; }
 .flying   { --first-color: white; }
-.electric { --first-color: yellow; }
+.electric { --first-color: rgba(255, 255, 0, 0.719); }
 .ground   { --first-color: rgba(202, 139, 139, 0.363); }
 .poison   { --first-color: rgb(81, 0, 128); }
 .fairy    { --first-color: pink; }
@@ -14,9 +14,10 @@
 .ghost    { --first-color: rgba(63, 63, 63, 0); }
 .ice      { --first-color: lightcyan; }
 .dragon   { --first-color: rgba(0, 0, 139, 0.5); }
+.steel    { --first-color: rgba(192, 192, 192, 0.199); }
 .normal   { --first-color: lightgray; }
 
-/* Segundo tipo */
+/* Second type */
 .second-fire     { --second-color: orange; }
 .second-grass    { --second-color: lightgreen; }
 .second-water    { --second-color: blue; }
@@ -32,16 +33,62 @@
 .second-ghost    { --second-color: rgba(63, 63, 63, 0); }
 .second-ice      { --second-color: lightcyan; }
 .second-dragon   { --second-color: rgba(0, 0, 139, 0.5); }
+.second-steel    { --second-color:  rgba(192, 192, 192, 0.199); }
 .second-normal   { --second-color: lightgray; }
 .second-one-type { --second-color: lightgray; }
 
-/* Clase base para el gradiente */
 .PokemonCard {
-  border: 0;
+  border: 1px solid black;
   background: linear-gradient(45deg, var(--second-color), var(--first-color));
 }
 
-
 .ant-card .ant-card-head{
     border-bottom: 0;
+}
+
+.ant-card-meta-detail .ant-card-meta-description{
+    width: fit-content;
+    background-color: #272727;
+    color: white;
+    padding: 3px 10px 5px 10px;
+    border-radius: 10px;
+}
+
+.ant-card .ant-card-head .ant-card-head-wrapper .ant-card-head-title{
+    width: fit-content;
+    background-color: #272727;
+    color: white;
+    padding: 2px 0 4px 0;
+    margin-right: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    .ant-card .ant-card-head{
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 0 7% 0 12%;
+    }
+
+    .ant-card .ant-card-head .ant-card-head-wrapper{
+        width: 100%;
+        margin: 0;
+    }
+
+    .ant-card .ant-card-head .ant-card-head-wrapper .ant-card-head-title{
+        margin-right: 0;
+        background-color: transparent;
+        text-align: start;
+    }
+
+    .ant-card-meta-detail .ant-card-meta-description{
+        width: 100%;
+        text-align: center;
+    }
 }
