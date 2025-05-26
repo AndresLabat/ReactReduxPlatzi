@@ -1,3 +1,30 @@
-.searcher{
+.searcher {
+    border: none;
     margin-bottom: 20px;
+}
+
+.searcher input {
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+}
+
+.searcher input:focus, .searcher input:hover {
+    background-color: black;
+    color: white;
+    box-shadow: none;
+    border-color: white;
+}
+
+.searcher input::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.searcher .ant-input-wrapper .ant-input-outlined{
+    border-radius: 6px;
+}
+
+.ant-input-wrapper .ant-input-group-addon{
+    display: none;
 }

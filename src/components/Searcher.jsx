@@ -10,7 +10,7 @@ const Searcher = () => {
         dispatch(setSearchTerm(e.target.value));
     };
 
-    return <Input.Search placeholder='Escribe el nombre del pokemon que deseas encontrar' className='searcher' onChange={onChange}/>
+    return <Input.Search placeholder='Nombre del pokemon que deseas encontrar' className='searcher' onChange={onChange}/>
 }
 
 export default Searcher;
