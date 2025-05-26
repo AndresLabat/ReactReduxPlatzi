@@ -1,7 +1,47 @@
-.PokemonCard{
-    background-color: lightgray;
+/* Primer tipo */
+.fire     { --first-color: orange; }
+.grass    { --first-color: lightgreen; }
+.water    { --first-color: blue; }
+.bug      { --first-color: green; }
+.flying   { --first-color: white; }
+.electric { --first-color: yellow; }
+.ground   { --first-color: rgba(202, 139, 139, 0.363); }
+.poison   { --first-color: rgb(81, 0, 128); }
+.fairy    { --first-color: pink; }
+.fighting { --first-color: red; }
+.psychic  { --first-color: magenta; }
+.rock     { --first-color: rgba(165, 42, 42, 0.342); }
+.ghost    { --first-color: rgba(63, 63, 63, 0); }
+.ice      { --first-color: lightcyan; }
+.dragon   { --first-color: rgba(0, 0, 139, 0.5); }
+.normal   { --first-color: lightgray; }
+
+/* Segundo tipo */
+.second-fire     { --second-color: orange; }
+.second-grass    { --second-color: lightgreen; }
+.second-water    { --second-color: blue; }
+.second-bug      { --second-color: green; }
+.second-flying   { --second-color: white; }
+.second-electric { --second-color: yellow; }
+.second-ground   { --second-color: rgba(202, 139, 139, 0.363); }
+.second-poison   { --second-color: rgb(81, 0, 128); }
+.second-fairy    { --second-color: pink; }
+.second-fighting { --second-color: red; }
+.second-psychic  { --second-color: magenta; }
+.second-rock     { --second-color: rgba(165, 42, 42, 0.342); }
+.second-ghost    { --second-color: rgba(63, 63, 63, 0); }
+.second-ice      { --second-color: lightcyan; }
+.second-dragon   { --second-color: rgba(0, 0, 139, 0.5); }
+.second-normal   { --second-color: lightgray; }
+.second-one-type { --second-color: lightgray; }
+
+/* Clase base para el gradiente */
+.PokemonCard {
+  border: 0;
+  background: linear-gradient(45deg, var(--second-color), var(--first-color));
 }
 
+
 .ant-card .ant-card-head{
-    border-bottom: 1px solid lightgray;
+    border-bottom: 0;
 }

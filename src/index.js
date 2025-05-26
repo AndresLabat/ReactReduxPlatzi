@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { applyMiddleware, compose, legacy_createStore as createStore } from 'redux';
 import { logger } from './middlewares';
 import './index.css';
-import rootReducers from './reducers/rootReducer';
+import rootReducers from './reducers/rootReducers';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

@@ -4,7 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import Searcher from './components/Searcher';
 import PokemonList from './components/PokemonList';
 import { getPokemon, getPokemonDetails } from './api';
-import { setLoading, setPokemons } from './actions';
+import { setLoading } from './slices/uiSlice.js';
+import { setPokemons } from './slices/dataSlice';
 import logo from './statics/logo.svg';
 import './App.css';
 
