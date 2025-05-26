@@ -10,7 +10,7 @@ const HeartButton = ({ isFavorite, onClick }) => {
         <Button
             icon={Icon}
             onClick={onClick}
-            type="text" // <--- Sin fondo ni borde
+            type="text"
         />
     );
 };

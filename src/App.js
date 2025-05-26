@@ -13,6 +13,7 @@ function App() {
 
   const pokemons = useSelector(state => state.data.pokemons);
   const loading = useSelector(state => state.ui.loading)
+  const searchTerm = useSelector(state => state.ui.searchTerm);
 
   const dispatch = useDispatch();
 
@@ -31,6 +32,10 @@ function App() {
     fetchPokemons();
   }, []);
 
+  const filteredPokemons = pokemons.filter(pokemon =>
+    pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className='App'>
       <Col span={4} offset={10}>
@@ -46,7 +51,7 @@ function App() {
           </Col>
         )
         : (
-          <PokemonList pokemons={pokemons} />
+          <PokemonList pokemons={filteredPokemons} />
         )
       }
     </div>
