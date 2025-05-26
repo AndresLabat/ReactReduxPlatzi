@@ -10,7 +10,9 @@ const PokemonList = ({ pokemons = Array(10).fill({ name: '', image: '' }) }) => 
                         name={pokemon.name}
                         key={pokemon.name}
                         image={pokemon.sprites.front_default}
-                        abilities={pokemon.abilities.map((ability) => ability.ability.name)}
+                        types={pokemon.types}
+                        id={pokemon.id}
+                        favorite={pokemon.favorite}
                     />
                 );
             })}
