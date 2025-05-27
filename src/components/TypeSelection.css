@@ -14,8 +14,7 @@
 .type-selection .ant-select-focused .ant-select-selector,
 .type-selection .ant-select-open .ant-select-selector,
 .type-selection .ant-select-selector:active {
-    border-color: white;
-    box-shadow: 0 0 0 2px rgba(255,255,255,0.2);
+    border-color: white !important;
 }
 
 .type-selection .ant-select-selector .ant-select-selection-wrap .ant-select-selection-item{
