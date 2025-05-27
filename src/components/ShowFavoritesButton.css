@@ -1,0 +1,23 @@
+.favorites-button{
+    background: black;
+    color: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+}
+
+.show-favorites:hover{
+    background: black !important;
+    border: 1px solid white;
+}
+
+.hide-favorites{
+    background: lightgrey;
+    border: 1px solid black;
+    color: black;
+}
+
+.hide-favorites:hover{
+    background: lightgrey !important;
+    border: 1px solid white;
+    color: black !important;
+}

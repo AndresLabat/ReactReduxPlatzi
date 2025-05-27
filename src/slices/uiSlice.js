@@ -4,6 +4,7 @@ const initialState = {
     loading: false,
     searchTerm: '',
     typeSelected: '',
+    showFavorites: false,
 }
 
 export const uiSlice = createSlice({
@@ -19,9 +20,12 @@ export const uiSlice = createSlice({
         setTypeSelected: (state, action) => {
             state.typeSelected = action.payload;
         },
+        toggleShowFavorites: (state) => {
+            state.showFavorites = !state.showFavorites;
+        },
     },
 });
 
-export const { setLoading, setSearchTerm, setTypeSelected } = uiSlice.actions;
+export const { setLoading, setSearchTerm, setTypeSelected, toggleShowFavorites } = uiSlice.actions;
 
 export default uiSlice.reducer;

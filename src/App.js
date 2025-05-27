@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Searcher from './components/Searcher';
 import TypeSelection from './components/TypeSelection';
 import PokemonList from './components/PokemonList';
+import ShowFavoritesButton from './components/ShowFavoritesButton';
 import { getPokemon, getPokemonDetails } from './api';
 import { setLoading } from './slices/uiSlice.js';
 import { setPokemons } from './slices/dataSlice';
@@ -16,6 +17,7 @@ function App() {
   const loading = useSelector(state => state.ui.loading)
   const searchTerm = useSelector(state => state.ui.searchTerm);
   const typeSelected = useSelector(state => state.ui.typeSelected);
+  const showFavorites = useSelector(state => state.ui.showFavorites);
 
   const allTypes = Array.from(
     new Set(
@@ -67,14 +69,19 @@ function App() {
           <TypeSelection options={pokemonTypes} selectedOption={typeSelected} />
         </div>
       </Col>
+      <div className='favorite-button-container'>
+        <ShowFavoritesButton showFavorites={showFavorites} />
+      </div>
       {loading
         ? (
-          <Col span={12} offset={12}>
+          <div className='spinner-container'>
             <Spin spinning size='large' />
-          </Col>
+          </div>
         )
         : (
-          <PokemonList pokemons={filteredPokemons} />
+          showFavorites
+            ? <PokemonList pokemons={filteredPokemons.filter(pokemon => pokemon.favorite)} />
+            : <PokemonList pokemons={filteredPokemons} />
         )
       }
     </div>

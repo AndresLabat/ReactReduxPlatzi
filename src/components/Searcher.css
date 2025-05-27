@@ -28,3 +28,9 @@
 .ant-input-wrapper .ant-input-group-addon{
     display: none;
 }
+
+@media (max-width: 768px) {
+    .searcher {
+        margin-bottom: 0;
+    }
+}

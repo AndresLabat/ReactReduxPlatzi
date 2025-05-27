@@ -17,6 +17,10 @@
     border-radius: 10px;
 }
 
+.ant-card .ant-card-head .ant-card-head-wrapper {
+    padding-top: 10px;
+}
+
 .ant-card .ant-card-head .ant-card-head-wrapper .ant-card-head-title{
     width: fit-content;
     background-color: #272727;
@@ -42,6 +46,7 @@
     .ant-card .ant-card-head .ant-card-head-wrapper{
         width: 100%;
         margin: 0;
+        padding-top: 0;
     }
 
     .ant-card .ant-card-head .ant-card-head-wrapper .ant-card-head-title{

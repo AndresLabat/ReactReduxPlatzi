@@ -13,9 +13,20 @@
   gap: 6px
 }
 
+.App .favorite-button-container{
+  display: flex;
+  justify-content: center;
+}
+
+.App .spinner-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
 @media (max-width: 768px) {
   .App img{
     margin-bottom: 0;
+    padding: 0;
   }
 
   .App .ant-col{
@@ -29,4 +40,8 @@
   .App .ant-col img{
     width: 70%;
   }
+
+  .App .searcher-container {
+    margin-top: 20px;
+}
 }
