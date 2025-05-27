@@ -8,6 +8,11 @@
   padding-top: 3rem;
 }
 
+.App .searcher-container {
+  display: flex;
+  gap: 6px
+}
+
 @media (max-width: 768px) {
   .App img{
     margin-bottom: 0;

@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     loading: false,
     searchTerm: '',
+    typeSelected: '',
 }
 
 export const uiSlice = createSlice({
@@ -15,9 +16,12 @@ export const uiSlice = createSlice({
         setSearchTerm: (state, action) => {
             state.searchTerm = action.payload;
         },
+        setTypeSelected: (state, action) => {
+            state.typeSelected = action.payload;
+        },
     },
 });
 
-export const { setLoading, setSearchTerm } = uiSlice.actions;
+export const { setLoading, setSearchTerm, setTypeSelected } = uiSlice.actions;
 
 export default uiSlice.reducer;

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Col, Spin } from 'antd';
 import { useSelector, useDispatch } from 'react-redux';
 import Searcher from './components/Searcher';
+import TypeSelection from './components/TypeSelection';
 import PokemonList from './components/PokemonList';
 import { getPokemon, getPokemonDetails } from './api';
 import { setLoading } from './slices/uiSlice.js';
@@ -14,6 +15,21 @@ function App() {
   const pokemons = useSelector(state => state.data.pokemons);
   const loading = useSelector(state => state.ui.loading)
   const searchTerm = useSelector(state => state.ui.searchTerm);
+  const typeSelected = useSelector(state => state.ui.typeSelected);
+
+  const allTypes = Array.from(
+    new Set(
+      pokemons.flatMap(pokemon => pokemon.types.map(t => t.type.name))
+    )
+  );
+
+  const pokemonTypes = [
+    { value: '', label: 'All types' },
+    ...allTypes.map(type => ({
+      value: type,
+      label: type.charAt(0).toUpperCase() + type.slice(1)
+    }))
+  ];
 
   const dispatch = useDispatch();
 
@@ -32,8 +48,12 @@ function App() {
     fetchPokemons();
   }, []);
 
-  const filteredPokemons = pokemons.filter(pokemon =>
+  const filteredPokemons = pokemons
+  .filter(pokemon =>
     pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
+  )
+  .filter(pokemon =>
+    !typeSelected || pokemon.types.some(t => t.type.name === typeSelected)
   );
 
   return (
@@ -42,7 +62,10 @@ function App() {
         <img src={logo} alt='Pokedux' />
       </Col>
       <Col span={8} offset={8}>
-        <Searcher />
+        <div className='searcher-container'>
+          <Searcher />
+          <TypeSelection options={pokemonTypes} selectedOption={typeSelected} />
+        </div>
       </Col>
       {loading
         ? (
