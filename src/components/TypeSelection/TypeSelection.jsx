@@ -1,6 +1,6 @@
 import { Select } from "antd"
 import { useDispatch } from "react-redux";
-import { setTypeSelected } from "../slices/uiSlice";
+import { setTypeSelected } from "../../slices/uiSlice";
 import './TypeSelection.css';
 
 

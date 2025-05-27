@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { Col, Spin } from 'antd';
 import { useSelector, useDispatch } from 'react-redux';
-import Searcher from './components/Searcher';
-import TypeSelection from './components/TypeSelection';
-import PokemonList from './components/PokemonList';
-import ShowFavoritesButton from './components/ShowFavoritesButton';
+import Searcher from './components/Searcher/Searcher.jsx';
+import TypeSelection from './components/TypeSelection/TypeSelection.jsx';
+import PokemonList from './components/PokemonList/PokemonList.jsx';
+import ShowFavoritesButton from './components/ShowFavoritesButton/ShowFavoritesButton.jsx';
 import { getPokemon, getPokemonDetails } from './api';
 import { setLoading } from './slices/uiSlice.js';
 import { setPokemons } from './slices/dataSlice';
@@ -57,7 +57,7 @@ function App() {
   .filter(pokemon =>
     !typeSelected || pokemon.types.some(t => t.type.name === typeSelected)
   );
-
+  
   return (
     <div className='App'>
       <Col span={4} offset={10}>
@@ -80,7 +80,11 @@ function App() {
         )
         : (
           showFavorites
-            ? <PokemonList pokemons={filteredPokemons.filter(pokemon => pokemon.favorite)} />
+            ? (
+                filteredPokemons.filter(pokemon => pokemon.favorite).length > 0
+                  ? <PokemonList pokemons={filteredPokemons.filter(pokemon => pokemon.favorite)} />
+                  : <div className='no-favorites'>No favorites found</div>
+              )
             : <PokemonList pokemons={filteredPokemons} />
         )
       }

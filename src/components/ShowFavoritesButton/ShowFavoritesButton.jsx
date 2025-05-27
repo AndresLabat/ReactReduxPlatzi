@@ -1,6 +1,6 @@
 import { Button } from 'antd'
 import { useDispatch } from 'react-redux';
-import { toggleShowFavorites } from '../slices/uiSlice';
+import { toggleShowFavorites } from '../../slices/uiSlice';
 import './ShowFavoritesButton.css';
 
 const ShowFavoritesButton = ({ showFavorites }) => {

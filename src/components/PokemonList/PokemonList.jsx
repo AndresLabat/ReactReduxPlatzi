@@ -1,4 +1,5 @@
-import PokemonCard from "./PokemonCard";
+
+import PokemonCard from '../PokemonCard/PokemonCard';
 import './PokemonList.css';
 
 const PokemonList = ({ pokemons = Array(10).fill({ name: '', image: '' }) }) => {

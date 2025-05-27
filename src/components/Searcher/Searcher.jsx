@@ -1,6 +1,6 @@
 import {Input} from 'antd'
 import { useDispatch } from 'react-redux';
-import { setSearchTerm } from '../slices/uiSlice';
+import { setSearchTerm } from '../../slices/uiSlice';
 import './Searcher.css';
 
 const Searcher = () => {

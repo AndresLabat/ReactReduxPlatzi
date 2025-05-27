@@ -1,4 +1,4 @@
-@import '../styles/variables.css';
+@import '../../styles/variables.css';
 
 .PokemonCard {
   border: 1px solid black;
@@ -18,14 +18,14 @@
 }
 
 .ant-card .ant-card-head .ant-card-head-wrapper {
-    padding-top: 10px;
+    padding-top: 0.625rem;
 }
 
 .ant-card .ant-card-head .ant-card-head-wrapper .ant-card-head-title{
     width: fit-content;
     background-color: #272727;
     color: white;
-    padding: 2px 0 4px 0;
+    padding: 0.125rem 0 0.25rem 0;
     margin-right: 25px;
     border-radius: 10px;
     text-align: center;
