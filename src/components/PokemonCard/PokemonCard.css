@@ -11,7 +11,10 @@
 
 .ant-card:hover{
     box-shadow: none;
-    border-color: white;
+    background-image: linear-gradient(215deg, var(--second-color), var(--first-color));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border: 1px solid white
 }
 
 .ant-card-meta-detail .ant-card-meta-description{
@@ -86,6 +89,10 @@
 
 .ant-modal-body .ant-btn-variant-text:hover{
     color: #b0b0b0 !important;
+}
+
+:where(.css-dev-only-do-not-override-1m2bkf9).ant-modal-root .ant-modal-mask {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 @media (max-width: 768px) {
