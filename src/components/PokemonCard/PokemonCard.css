@@ -1,12 +1,17 @@
 @import '../../styles/variables.css';
 
-.PokemonCard {
+.pokemon-card {
   border: 1px solid black;
   background: linear-gradient(45deg, var(--second-color), var(--first-color));
 }
 
 .ant-card .ant-card-head{
     border-bottom: 0;
+}
+
+.ant-card:hover{
+    box-shadow: none;
+    border-color: white;
 }
 
 .ant-card-meta-detail .ant-card-meta-description{
@@ -29,6 +34,58 @@
     margin-right: 25px;
     border-radius: 10px;
     text-align: center;
+}
+
+.modal-card{
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+
+.ant-modal-root .ant-modal-centered .ant-modal .hearth-right{
+    text-align: right;
+}
+
+.ant-modal-body div ul{
+    margin: 0;
+}
+
+.ant-modal .ant-modal-content {
+    background-color: #272727;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.45);
+    
+}
+
+.modal-pokemon {
+    background-image:
+        linear-gradient(#272727, #272727),
+        linear-gradient(75deg, var(--second-color), var(--first-color));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border: 2px solid transparent;
+    border-radius: 1rem;
+}
+
+.ant-modal-close-icon{
+    color: white;
+}
+
+.ant-modal-header .ant-modal-title{
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    background-color: #272727;
+    color: white;
+}
+
+.ant-modal-body .ant-btn-icon-only{
+    color: white;
+}
+
+.ant-modal-body .ant-btn-variant-text:hover{
+    color: #b0b0b0 !important;
 }
 
 @media (max-width: 768px) {

@@ -14,6 +14,11 @@ const PokemonList = ({ pokemons = Array(10).fill({ name: '', image: '' }) }) => 
                         types={pokemon.types}
                         id={pokemon.id}
                         favorite={pokemon.favorite}
+                        stats={pokemon.stats.map(stat => ({
+                            name: stat.stat.name,
+                            value: stat.base_stat
+                        }))}
+                        baseExperience={pokemon.base_experience}
                     />
                 );
             })}
